@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Меню</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        width: 500px;
+        /* max-width: 600px; */
+        margin: 0 auto;
+      }
+
+      li {
+        background-color: #fff;
+        padding: 15px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <h1>Добро пожаловать на систему отслеживания времени</h1> -->
+      <ul>
+        <li><a href="{% url 'register_employee' %}">Регистрация</a></li>
+        <li><a href="{% url 'employee_list' %}">Список сотрудников</a></li>
+        <li><a href="{% url 'create_project' %}">Создать проект</a></li>
+        <li><a href="{% url 'project_list' %}">Список проектов</a></li>
+        <li><a href="{% url 'create_task' %}">Создать задачу</a></li>
+        <li><a href="{% url 'task_list' %}">Список задач</a></li>
+        <li><a href="{% url 'start_timer' %}">Таймер</a></li>
+        <li><a href="{% url 'daily_report' %}">Ежедневный отчет</a></li>
+        <li><a href="{% url 'weekly_report' %}">Недельный отчет</a></li>
+        <li><a href="{% url 'monthly_report' %}">Месячный отчет</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

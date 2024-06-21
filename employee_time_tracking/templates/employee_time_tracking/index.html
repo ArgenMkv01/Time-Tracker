@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная страница</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        height: 100vh;
+        margin: 0;
+      }
+      .sidebar {
+        background-color: #2c3e50;
+        color: white;
+        width: 250px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .sidebar h3 {
+        margin-top: 0;
+      }
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        margin: 10px 0;
+      }
+      .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #ecf0f1; */
+        background-image: url("https://pcvector.net/uploads/posts/2018-08/1533326959_low-poly-background-generator-min.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .timer {
+        font-size: 100px;
+      }
+      .timer__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .buttons {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      #timer {
+        font-size: 100px;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div>
+        <h3>Меню</h3>
+        <ul>
+          <li><a href="{% url 'employee_list' %}">Список сотрудников</a></li>
+          <li><a href="{% url 'create_project' %}">Создать проект</a></li>
+          <li><a href="{% url 'project_list' %}">Список проектов</a></li>
+          <li><a href="{% url 'create_task' %}">Создать задачу</a></li>
+          <li><a href="{% url 'task_list' %}">Список задач</a></li>
+          <li><a href="{% url 'report' 'день' %}">Отчет за день</a></li>
+          <li><a href="{% url 'report' 'неделю' %}">Отчет за неделю</a></li>
+          <li><a href="{% url 'report' 'месяц' %}">Отчет за месяц</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>Пользователь: {{ username }}</p>
+        <form method="post" action="{% url 'logout' %}">
+          {% csrf_token %}
+          <button type="submit" class="logout-button">Logout</button>
+        </form>
+      </div>
+    </div>
+    <!-- <div class="main-content">
+      <div class="timer__wrapper">
+        <div id="timer">00:00:00</div>
+        <div class="buttons">
+          <button onclick="startTimer()">Start</button>
+          <button onclick="pauseTimer()">Pause</button>
+          <button onclick="stopTimer()">Stop</button>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="main-content">
+      <div class="timer__wrapper">
+        <div id="timer">00:00:00</div>
+        <form method="post">
+          {% csrf_token %}
+          <button name="action" value="start">Старт</button>
+          <button name="action" value="pause">Пауза</button>
+          <button name="action" value="stop">Стоп</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      let timer;
+      let isRunning = false;
+      let elapsedTime = 0;
+
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document
+          .querySelector('button[name="action"][value="start"]')
+          .addEventListener("click", handleStart);
+        document
+          .querySelector('button[name="action"][value="pause"]')
+          .addEventListener("click", handlePause);
+        document
+          .querySelector('button[name="action"][value="stop"]')
+          .addEventListener("click", handleStop);
+      });
+
+      function handleStart(event) {
+        event.preventDefault();
+        if (!isRunning) {
+          isRunning = true;
+          startTimer();
+          sendPostRequest("start");
+        }
+      }
+
+      function handlePause(event) {
+        event.preventDefault();
+        if (isRunning) {
+          isRunning = false;
+          clearInterval(timer);
+          sendPostRequest("pause");
+        }
+      }
+
+      function handleStop(event) {
+        event.preventDefault();
+        if (isRunning) {
+          isRunning = false;
+          clearInterval(timer);
+          elapsedTime = 0;
+          document.getElementById("timer").textContent = "00:00:00";
+          sendPostRequest("stop");
+        }
+      }
+
+      function startTimer() {
+        timer = setInterval(updateTimer, 1000);
+      }
+
+      function updateTimer() {
+        elapsedTime++;
+        document.getElementById("timer").textContent = formatTime(elapsedTime);
+      }
+
+      function formatTime(seconds) {
+        let date = new Date(seconds * 1000);
+        return date.toISOString().substr(11, 8);
+      }
+
+      function sendPostRequest(action) {
+        const formData = new FormData();
+        formData.append("action", action);
+        fetch("", {
+          method: "POST",
+          body: formData,
+          headers: {
+            "X-CSRFToken": getCookie("csrftoken"),
+          },
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            // Обработка успешного ответа от сервера
+            console.log("Server response:", data);
+          })
+          .catch((error) => {
+            console.error(
+              "There has been a problem with your fetch operation:",
+              error
+            );
+          });
+      }
+
+      // Функция для получения CSRF-токена из cookie
+      function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+          const cookies = document.cookie.split(";");
+          for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Находим CSRF-токен по имени
+            if (cookie.substring(0, name.length + 1) === name + "=") {
+              cookieValue = decodeURIComponent(
+                cookie.substring(name.length + 1)
+              );
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+    </script>
+
+    <!-- <script>
+      let startTime;
+      let timerInterval;
+      let pausedTime = 0;
+      let isPaused = false;
+
+      function updateTimer() {
+        const currentTime = Date.now();
+        let elapsedTime = currentTime - startTime;
+        if (isPaused) {
+          elapsedTime -= pausedTime;
+        }
+        const formattedTime = formatTime(elapsedTime / 1000);
+        document.getElementById("timer").textContent = formattedTime;
+      }
+
+      function formatTime(seconds) {
+        const hrs = Math.floor(seconds / 3600);
+        const mins = Math.floor((seconds % 3600) / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${hrs.toString().padStart(2, "0")}:${mins
+          .toString()
+          .padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+      }
+
+      function startTimer() {
+        startTime = Date.now();
+        timerInterval = setInterval(updateTimer, 1000);
+        document
+          .querySelectorAll("button")
+          .forEach((button) => (button.disabled = true));
+        document.querySelector("button:nth-child(3)").disabled = false;
+      }
+
+      function pauseTimer() {
+        clearInterval(timerInterval);
+        pausedTime += Date.now() - startTime;
+        isPaused = true;
+        document
+          .querySelectorAll("button")
+          .forEach((button) => (button.disabled = false));
+        document.querySelector("button:nth-child(1)").disabled = true;
+      }
+
+      function stopTimer() {
+        clearInterval(timerInterval);
+        const endTime = Date.now();
+        const elapsedTime = (endTime - startTime - pausedTime) / 1000;
+        saveTime(elapsedTime);
+        document.getElementById("timer").textContent = "00:00:00";
+        document
+          .querySelectorAll("button")
+          .forEach((button) => (button.disabled = false));
+        pausedTime = 0;
+        isPaused = false;
+      }
+
+      function saveTime(elapsedTime) {
+        // Отправить данные на сервер для сохранения в БД
+        fetch("/save_time/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+          },
+          body: JSON.stringify({ time: elapsedTime }),
+        })
+          .then((response) => {
+            if (response.ok) {
+              console.log("Время успешно сохранено в БД");
+            } else {
+              console.error("Произошла ошибка при сохранении времени в БД");
+            }
+          })
+          .catch((error) => {
+            console.error("Произошла ошибка при отправке запроса:", error);
+          });
+      }
+    </script> -->
+  </body>
+</html>

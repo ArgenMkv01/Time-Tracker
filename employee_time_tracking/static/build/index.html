@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная страница</title>
+</head>
+<body>
+    <h1>Добро пожаловать на систему отслеживания времени</h1>
+    <ul>
+        <li><a href="{% url 'employee_list' %}">Список сотрудников</a></li>
+        <li><a href="{% url 'project_list' %}">Список проектов</a></li>
+        <li><a href="{% url 'task_list' %}">Список задач</a></li>
+        <li><a href="{% url 'add_time_entry' %}">Добавить запись времени</a></li>
+        <li><a href="{% url 'report' period='daily' %}">Отчет за день</a></li>
+        <li><a href="{% url 'report' period='weekly' %}">Отчет за неделю</a></li>
+        <li><a href="{% url 'report' period='monthly' %}">Отчет за месяц</a></li>
+    </ul>
+</body>
+</html>

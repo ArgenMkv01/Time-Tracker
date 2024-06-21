@@ -1,0 +1,22 @@
+<!-- stop_work.html -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Work</title>
+</head>
+<body>
+    <h1>Stop Work</h1>
+    <form method="post" action="{% url 'stop_work' %}">
+        {% csrf_token %}
+        <button type="submit">Stop Work</button>
+    </form>
+</body>
+</html> -->
+
+<!-- stop_work.html -->
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Stop Work</button>
+</form>
