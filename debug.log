@@ -18909,3 +18909,239 @@ Traceback (most recent call last):
     total_time = sum((session.total_time for session in sessions), timedelta())
                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 TypeError: unsupported operand type(s) for +: 'datetime.timedelta' and 'NoneType'
+2024-06-21 17:59:30,040 INFO $DATABASE_URL not found, falling back to previous settings!
+2024-06-21 17:59:30,042 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-21 17:59:30,044 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-21 17:59:30,045 INFO Applying Heroku logging configuration to Django settings.
+2024-06-21 17:59:32,835 INFO $DATABASE_URL not found, falling back to previous settings!
+2024-06-21 17:59:32,836 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-21 17:59:32,838 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-21 17:59:32,839 INFO Applying Heroku logging configuration to Django settings.
+2024-06-21 17:59:33,292 INFO Watching for file changes with StatReloader
+2024-06-21 17:59:43,129 WARNING Session data corrupted
+2024-06-21 18:26:27,147 ERROR Internal Server Error: /report/день/
+Traceback (most recent call last):
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\employee_time_tracking\views.py", line 126, in report
+    total_time = sum((session.total_time for session in sessions), timedelta())
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported operand type(s) for +: 'datetime.timedelta' and 'NoneType'
+2024-06-22 18:29:56,141 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:29:56,143 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:29:56,143 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:29:56,145 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:29:56,146 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:29:56,147 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:29:58,773 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:29:58,774 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:29:58,775 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:29:58,776 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:29:58,776 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:29:58,776 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:29:59,299 INFO Watching for file changes with StatReloader
+2024-06-22 18:34:44,509 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:34:44,510 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:34:44,510 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:34:44,511 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:34:44,511 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:34:44,512 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:34:46,629 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:34:46,630 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:34:46,631 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:34:46,632 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:34:46,632 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:34:46,633 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:34:47,103 INFO Watching for file changes with StatReloader
+2024-06-22 18:35:05,313 INFO C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\time_tracking\settings.py changed, reloading.
+2024-06-22 18:35:26,728 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:35:26,729 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:35:26,730 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:35:26,731 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:35:26,732 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:35:26,733 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:35:28,858 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:35:28,860 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:35:28,860 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:35:28,861 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:35:28,862 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:35:28,862 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:35:29,311 INFO Watching for file changes with StatReloader
+2024-06-22 18:38:53,188 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:38:53,190 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:38:53,190 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:38:53,192 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:38:53,193 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:38:53,194 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:38:55,432 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:38:55,433 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:38:55,433 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:38:55,434 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:38:55,435 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:38:55,436 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:38:55,877 INFO Watching for file changes with StatReloader
+2024-06-22 18:41:25,642 INFO C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\time_tracking\settings.py changed, reloading.
+2024-06-22 18:41:27,765 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:41:27,767 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:41:27,767 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:41:27,768 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:41:27,769 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:41:27,770 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:41:28,214 INFO Watching for file changes with StatReloader
+2024-06-22 18:41:51,537 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:41:51,538 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:41:51,539 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:41:51,540 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:41:51,541 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:41:51,541 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:41:53,657 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:41:53,658 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:41:53,659 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:41:53,660 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:41:53,660 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:41:53,661 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:41:54,098 INFO Watching for file changes with StatReloader
+2024-06-22 18:45:52,273 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:45:52,273 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:45:52,274 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:45:52,275 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:45:52,275 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:45:52,275 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:45:54,487 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 18:45:54,488 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 18:45:54,489 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 18:45:54,491 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 18:45:54,492 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 18:45:54,493 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 18:45:54,935 INFO Watching for file changes with StatReloader
+2024-06-22 18:55:26,664 INFO Watching for file changes with StatReloader
+2024-06-22 18:55:31,766 WARNING Not Found: /favicon.ico
+2024-06-22 19:00:21,281 ERROR Internal Server Error: /index/
+Traceback (most recent call last):
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "employee_time_tracking_worksession_pkey"
+DETAIL:  Ключ "(id)=(12)" уже существует.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\employee_time_tracking\views.py", line 64, in index
+    WorkSession.objects.create(employee=employee, start_time=timezone.now())
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\models\base.py", line 822, in save
+    self.save_base(
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\models\base.py", line 909, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\models\base.py", line 1071, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\models\base.py", line 1112, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "employee_time_tracking_worksession_pkey"
+DETAIL:  Ключ "(id)=(12)" уже существует.
+
+2024-06-22 19:07:03,883 INFO C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\employee_time_tracking\views.py changed, reloading.
+2024-06-22 19:07:07,185 INFO Watching for file changes with StatReloader
+2024-06-22 19:07:21,944 INFO C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\employee_time_tracking\views.py changed, reloading.
+2024-06-22 19:07:24,469 INFO Watching for file changes with StatReloader
+2024-06-22 19:07:32,592 INFO C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\employee_time_tracking\views.py changed, reloading.
+2024-06-22 19:07:35,252 INFO Watching for file changes with StatReloader
+2024-06-22 19:07:39,990 INFO C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\employee_time_tracking\views.py changed, reloading.
+2024-06-22 19:07:42,548 INFO Watching for file changes with StatReloader
+2024-06-22 19:07:47,133 INFO C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\employee_time_tracking\views.py changed, reloading.
+2024-06-22 19:07:49,422 INFO Watching for file changes with StatReloader
+2024-06-22 19:09:57,941 INFO C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\time_tracking\settings.py changed, reloading.
+2024-06-22 19:10:00,157 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 19:10:00,159 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 19:10:00,160 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 19:10:00,163 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 19:10:00,163 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 19:10:00,166 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 19:10:00,805 INFO Watching for file changes with StatReloader
+2024-06-22 19:10:18,339 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 19:10:18,340 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 19:10:18,341 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 19:10:18,342 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 19:10:18,343 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 19:10:18,344 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 19:10:20,451 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 19:10:20,452 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 19:10:20,452 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 19:10:20,454 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 19:10:20,454 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 19:10:20,455 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 19:10:20,901 INFO Watching for file changes with StatReloader
+2024-06-22 19:18:22,269 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 19:18:22,271 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 19:18:22,271 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 19:18:22,272 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 19:18:22,273 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 19:18:22,274 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 19:18:24,404 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 19:18:24,405 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 19:18:24,406 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 19:18:24,407 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 19:18:24,407 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 19:18:24,408 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 19:18:24,849 INFO Watching for file changes with StatReloader
+2024-06-22 19:18:49,648 INFO C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\time_tracking\settings.py changed, reloading.
+2024-06-22 19:18:51,983 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 19:18:51,984 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 19:18:51,985 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 19:18:51,987 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 19:18:51,988 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 19:18:51,989 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 19:18:52,440 INFO Watching for file changes with StatReloader
+2024-06-22 19:23:50,699 INFO C:\Users\lenovo\OneDrive\Рабочий стол\ПРЕДМЕТЫ\Практика\TimeTracking\time_tracking\settings.py changed, reloading.
+2024-06-22 19:23:53,580 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 19:23:53,581 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 19:23:53,582 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 19:23:53,584 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 19:23:53,585 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 19:23:53,586 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.
+2024-06-22 19:24:46,577 INFO Adding $DATABASE_URL to default DATABASE Django setting.
+2024-06-22 19:24:46,578 INFO Adding $DATABASE_URL to TEST default DATABASE Django setting.
+2024-06-22 19:24:46,579 INFO Applying Heroku Staticfiles configuration to Django settings.
+2024-06-22 19:24:46,580 INFO Applying Heroku ALLOWED_HOSTS configuration to Django settings.
+2024-06-22 19:24:46,581 INFO Applying Heroku logging configuration to Django settings.
+2024-06-22 19:24:46,581 INFO Adding $SECRET_KEY to SECRET_KEY Django setting.

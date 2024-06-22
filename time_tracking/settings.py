@@ -3,6 +3,7 @@ import django_heroku
 import dj_database_url
 from decouple import config
 import logging
+import os
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -116,3 +117,9 @@ STATICFILES_DIRS = [
 ]
 
 django_heroku.settings(locals())
+
+if 'OPTIONS' not in DATABASES['default']:
+    DATABASES['default']['OPTIONS'] = {}
+DATABASES['default']['OPTIONS']['sslmode'] = 'disable'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
